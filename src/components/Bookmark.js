@@ -6,19 +6,19 @@ let Bookmark = (props) => {
     const [text, setText] = useState(props.color);
     const styles = {
         "display": "flex",
-        "flex-direction": "row",
-        "border-radius": "3px",
-        "justify-content": "center",
-        "border-width": "1px",
+        "flexDirection": "row",
+        "borderRadius": "3px",
+        "justifyContent": "center",
+        "borderWidth": " 1px 1px 1px 30px",
         "color": text,
-        "background-color": color,
-        "text-transform": "uppercase",
+        "backgroundColor": color,
+        "textTransform": "uppercase",
         "border": `1px solid ${props.color}`,
-        "border-left": `30px solid ${props.color}`,
+        "borderLeft": `30px solid ${props.color}`,
         "width": "inherit",
         "height": "40px",
-        "align-items": "center",
-        "margin-bottom": "5px",
+        "alignItems": "center",
+        "marginBottom": "5px",
         "cursor": "pointer"
   };
 

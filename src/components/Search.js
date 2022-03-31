@@ -8,9 +8,9 @@ const Search = () => {
         }
 
     return (
-        <div class="search-bar search-bar-box">
+        <div className="search-bar search-bar-box">
             <input 
-                class="search-bar" 
+                className="search-bar" 
                 onKeyPress={handleSearch} 
                 placeholder="present day, present time"
                 autoFocus 
