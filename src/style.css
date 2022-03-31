@@ -52,11 +52,11 @@ body {
     display: flex;
     background-color: transparent;
     border: none;
-    font-size: 2.3rem;
+    font-size: 2rem;
     font-family: 'Raleway';
     color: #484d6da2;
     text-align: center;
-    width: 70vw;
+    width: inherit;
 }
 .search-bar:focus {
     outline: none;
@@ -65,7 +65,7 @@ body {
 .search-bar-box {
     border-bottom: 3px solid #484D6D;
     margin-bottom: 50px;
-    width: 70vw;
+    width: 400px;
 }
 
 .bookmarks-main {
