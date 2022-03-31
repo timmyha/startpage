@@ -14,6 +14,23 @@
   outline: none;
 }
 
+@media (max-width: 650px) {
+    .bookmarks-main {
+      flex-direction:column !important;
+    }
+    .search-bar {
+        font-size: 20px !important;
+        width: 90vw !important;
+        margin-top: -50px !important;
+    }
+    .clock-text {
+        visibility: hidden;
+    }
+    .bookmarks-display {
+        width: 90vw !important;
+    }
+   }
+
 body {
     font-family: raleway;
     text-transform: uppercase;
@@ -51,18 +68,19 @@ body {
 
 .bookmarks-main {
     display: flex;
+    flex-direction: row;
 }
 
 .bookmarks-display {
     display: flex;
     flex-direction: column;
+    width: 150px;
+    margin-right: 10px;
 }
 
 .bookmark-card {
     display: flex;
-    flex-direction: row;
     border-radius: 3px;
-    justify-content: center;
     border-width: 1px;
     color: white;
     text-transform: uppercase;

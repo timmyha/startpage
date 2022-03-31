@@ -15,10 +15,9 @@ let Bookmark = (props) => {
         "text-transform": "uppercase",
         "border": `1px solid ${props.color}`,
         "border-left": `30px solid ${props.color}`,
-        "width": "150px",
+        "width": "inherit",
         "height": "40px",
         "align-items": "center",
-        "margin-left": "10px",
         "margin-bottom": "5px",
         "cursor": "pointer"
   };
