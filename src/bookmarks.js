@@ -37,13 +37,13 @@ export default [
 {
     "title": "stackoverflow",
     "category": "dev",
-    "link": "http://www.instagram.com",
+    "link": "http://www.stackoverflow.com",
     "color": "#46BA84"
 },
 {
     "title": "devdocs",
     "category": "dev",
-    "link": "http://www.instagram.com",
+    "link": "http://www.devdocs.io",
     "color": "#46BA84"
 },
 {
@@ -91,7 +91,7 @@ export default [
 {
     "title": "coolors",
     "category": "tools",
-    "link": "http://www.coolors.com",
+    "link": "http://www.coolors.co",
     "color": "#7351ED"
 },
 {
