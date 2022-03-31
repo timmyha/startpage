@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@700&display=swap');
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+*::selection
+{
+  -webkit-appearance: none;
+  outline: none;
+}
+
+body {
+    font-family: raleway;
+    text-transform: uppercase;
+    font-size: 12px;
+    background-color: #EFE9F4;
+    color: #484D6D;
+}
+.main-page {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    min-height: 90vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.search-bar {
+    display: flex;
+    background-color: transparent;
+    border: none;
+    font-size: 40px;
+    font-family: 'Raleway';
+    color: #484d6da2;
+    text-align: center;
+}
+.search-bar:focus {
+    outline: none;
+}
+
+.search-bar-box {
+    border-bottom: 3px solid #484D6D;
+    margin-bottom: 50px;
+}
+
+.bookmarks-main {
+    display: flex;
+}
+
+.bookmarks-display {
+    display: flex;
+    flex-direction: column;
+}
+
+.bookmark-card {
+    display: flex;
+    flex-direction: row;
+    border-radius: 3px;
+    justify-content: center;
+    border-width: 1px;
+    color: white;
+    text-transform: uppercase;
+    width: 150px;
+    height: 40px;
+    align-items: center;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+.bookmarks-title {
+    text-align: right;
+    margin-right: 10px;
+    text-transform: lowercase;
+}
+
+.clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.clock-text {
+    font-size: 100px;
+    font-family: 'Jura'
+}
