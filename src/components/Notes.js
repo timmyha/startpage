@@ -7,7 +7,7 @@ import { nanoid } from 'nanoid'
 
 const Notes = ({notes, setNotes, id}) => {
 
-    const [notesField, setNotesField] = useState('enter')
+    const [notesField, setNotesField] = useState('')
 
     const handleSubmit = (event) => {
         if (event.key === 'Enter') {
@@ -48,7 +48,7 @@ const Notes = ({notes, setNotes, id}) => {
         <TextareaAutosize
             autoFocus
             className="input-note"
-            placeholder='start typing'
+            placeholder='...new note'
             onKeyDown={handleSubmit}
             value={notesField}
             onChange={handleNotesFieldChange}
