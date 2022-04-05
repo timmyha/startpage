@@ -23,13 +23,15 @@ const Clock = (props) => {
 
     const current = weather && weather.current
     const location = weather && weather.location
+    const article = weather && current.condition.text[0]
+                                      .match(/[aeiou]/gi) ? "an" : "a"
 
 return (
          weather && <div className="clock">
             <h1 className="clock-text">{timeNow}</h1>
             <span 
                 className="weather-display">
-                    <i>{current.temp_f}&deg;F</i></span>
+                    <i>{article} {current.condition.text} {current.temp_f}&deg;F in {location.name}, {location.region}</i></span>
              </div> 
 )
 }
