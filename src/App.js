@@ -6,7 +6,6 @@ import Search from './components/Search'
 import Bookmark from './components/Bookmark'
 import NotesToggle from './components/NotesToggle'
 import Notes from './components/Notes'
-import axios from 'axios'
 import { useEffect, useState } from 'react'
 
 function App() {
