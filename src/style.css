@@ -10,11 +10,10 @@
 }
 *::selection
 {
-  -webkit-appearance: none;
-  outline: none;
+  background-color: transparent;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
     .bookmarks-main {
       flex-direction:column !important;
     }
@@ -29,6 +28,9 @@
     .bookmarks-display {
         width: 90vw !important;
     }
+    .weather-display {
+        visibility: hidden;
+    }
    }
 
 body {
@@ -42,7 +44,7 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
-    min-height: 90vh;
+    margin-top: 10%;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -64,7 +66,7 @@ body {
 
 .search-bar-box {
     border-bottom: 3px solid #484D6D;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     width: 400px;
 }
 
@@ -84,13 +86,13 @@ body {
     display: flex;
     border-radius: 3px;
     border-width: 1px;
-    color: white;
     text-transform: uppercase;
     width: 150px;
     height: 40px;
     align-items: center;
     margin-left: 10px;
     margin-bottom: 5px;
+    min-height: 10000px;
 }
 
 .bookmarks-title {
@@ -101,12 +103,104 @@ body {
 
 .clock {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
 }
 
 .clock-text {
     font-size: 100px;
-    font-family: 'Jura'
+    font-family: 'Jura';
+}
+
+.weather-display {
+    display: flex;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    text-transform: lowercase;
+    justify-content: right !important;
+    font-family: Helvetica, sans-serif;
+
+    color: white;
+    background-color: #484D6D;
+    text-transform: uppercase;
+}
+
+.toggle-buttons {
+    margin-bottom: 30px;
+}
+
+.bookmarks-button {
+    font-size: 10px;
+    padding: 5px;
+    border: 1px solid #484D6D;
+    border-radius: 5px 0px 0px 5px;
+    cursor: pointer;
+}
+
+.notes-button {
+    font-size: 10px;
+    padding: 5px;
+    border: 1px solid #484D6D;
+    border-radius: 0px 5px 5px 0px;
+    cursor: pointer;
+}
+
+.plus-icon {
+    color: #484d6da9;
+    cursor: pointer;
+}
+
+
+.plus-icon:hover {
+    color: #484d6d;
+    cursor: pointer;
+}
+
+.input-note {
+    background-color: #484d6d1c;
+    border: none;
+    font-family: 'Raleway';
+    font-size: 20px;
+    text-align: center;
+    color: #484D6D;
+    border-bottom: 3px solid #484D6D;
+
+    width: 300px;
+    height: 30px;
+}
+
+.input-note:focus {
+    outline: none;
+}
+
+.note-content {
+    font-family: 'Raleway';
+    font-size: 15px;
+    color: #484D6D;
+    text-transform: none;
+}
+
+.input-note::selection
+{
+    background-color: #484D6D;
+    color: #EFE9F4;
+}
+
+textarea {
+    resize: none;
+}
+
+.note-item {
+    font-size: 20px;
+    list-style-type: none;
+    margin-bottom: 10px;
+    text-transform: none;
+    cursor: pointer;
+}
+
+.note-item:hover {
+    text-decoration: line-through 3px;
+    font-style:italic;
+
 }

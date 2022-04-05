@@ -4,8 +4,24 @@ import Main from './components/Main'
 import Clock from './components/Clock'
 import Search from './components/Search'
 import Bookmark from './components/Bookmark'
+import NotesToggle from './components/NotesToggle'
+import Notes from './components/Notes'
+import axios from 'axios'
+import { useEffect, useState } from 'react'
 
 function App() {
+
+    useEffect(() => {
+        const data = localStorage.getItem('my-notes')
+            data && setNotes(JSON.parse(data))
+    }, [])
+
+    const [notes, setNotes] = useState(JSON.parse(localStorage.getItem("my-notes")) || [])
+    const [notesApp, toggleNotesApp] = useState(true)
+
+    useEffect(()=> {
+        localStorage.setItem('my-notes', JSON.stringify(notes))
+    })
 
     let social = bookmarks.map(bookmark => (
         bookmark.category === "social" && 
@@ -53,14 +69,22 @@ function App() {
         
   return (
     <div className="main-page">
-        <Clock />
+        <Clock tools={tools} />
         <Search />
+        <NotesToggle 
+            toggleNotesApp={toggleNotesApp}
+            notesApp={notesApp}
+        />
+    {   notesApp ? 
         <Main 
             social={social}
             dev={dev}
             entertainment={entertainment}
             tools={tools}
-        />
+        /> : 
+        <Notes
+            notes={notes}
+            setNotes={setNotes} /> }
     </div>
   );
 }

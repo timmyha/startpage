@@ -20,9 +20,9 @@ export default [
     "color": "#EC5058"
 },
 {
-    "title": "linkedin",
+    "title": "gmail",
     "category": "social",
-    "link": "http://www.linkedin.com",
+    "link": "http://www.gmail.com",
     "color": "#EC5058"
 },
 
