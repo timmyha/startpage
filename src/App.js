@@ -7,6 +7,7 @@ import Bookmark from './components/Bookmark'
 import NotesToggle from './components/NotesToggle'
 import Notes from './components/Notes'
 import { useEffect, useState } from 'react'
+import toast, { Toaster } from 'react-hot-toast';
 
 function App() {
 
@@ -68,6 +69,20 @@ function App() {
         
   return (
     <div className="main-page">
+        <Toaster 
+        toastOptions={{
+            className: '',
+            style: {
+                padding: '0px',
+                color: 'white',
+                backgroundColor: 'transparent',
+                boxShadow: "unset"
+            },
+          }}
+          containerStyle={{
+            position: 'fixed',
+          }}
+        />
         <Clock tools={tools} />
         <Search />
         <NotesToggle 

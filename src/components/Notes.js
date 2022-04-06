@@ -1,9 +1,7 @@
 import {useState, useEffect} from 'react'
 import TextareaAutosize from "react-autosize-textarea"
-import noteService from '../services/notes'
-import DeleteIcon from './icons/trashcan.js'
 import { nanoid } from 'nanoid'
-
+import toast, { Toaster } from 'react-hot-toast';
 
 const Notes = ({notes, setNotes, id}) => {
 
@@ -20,11 +18,13 @@ const Notes = ({notes, setNotes, id}) => {
                 }
                     ])
                 setNotesField('')
+                toast.success('', {duration: 1000})
                }
             }
 
     const handleDeleteNote = (id) => {
         setNotes(notes.filter(note => note.id !== id))
+        toast.error('', {duration: 1000})
     };
 
     const notesContent = notes.map(note => {
