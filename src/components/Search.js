@@ -1,11 +1,13 @@
 const Search = () => {
 
     function handleSearch(event) {
+        let query = event.target.value
         if (event.key === 'Enter') {
+            /.com|.net|.org|.io|.us|.uk|.ca|.gg|.to/.test(query) ?
+            window.location.href=`https://${query}` :
          window.location
-                .href=`https://duckduckgo.com/?q=${event.target.value}`
-            }
-        }
+                .href=`https://duckduckgo.com/?q=${query}`
+        }}
 
     return (
         <div className="search-bar search-bar-box">
