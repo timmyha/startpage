@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react'
 import TextareaAutosize from "react-autosize-textarea"
 import { nanoid } from 'nanoid'
 import toast, { Toaster } from 'react-hot-toast';
+import NoteItem from './NoteItem.js'
 
 const Notes = ({notes, setNotes, id}) => {
 
@@ -14,6 +15,7 @@ const Notes = ({notes, setNotes, id}) => {
                 ...notes, 
                 {
                     content: event.target.value,
+                    isComplete: false,
                     id: nanoid()
                 }
                     ])
@@ -28,13 +30,11 @@ const Notes = ({notes, setNotes, id}) => {
     };
 
     const notesContent = notes.map(note => {
-       return   <li 
-                    className="note-item"
+       return   <NoteItem 
                     key={nanoid()}
-                    onClick={() => handleDeleteNote(note.id)}
-                >
-                    {note.content}
-                </li>
+                    handleDeleteNote={()=> handleDeleteNote(note.id)}
+                    content={note.content}
+                />
     }
     )
 

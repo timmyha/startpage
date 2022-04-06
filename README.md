@@ -14,7 +14,6 @@ for quicker access to a search bar with [bangs](https://duckduckgo.com/bang), as
 
 - [ ] Add light/dark mode
 - [x] Add to-do module
-- [ ] Further to-do functionality
 - [ ] Add weather data in a way that fits the theme
 - [ ] Add ability to control which categories are rendered via `bookmarks.js`
 - [ ] Ability to control theme from front-end
@@ -40,4 +39,7 @@ to go directly to a subreddit, type '/r/your_search_query'
 
 #### to-do list
 
-To-dos are saved in local storage. Clicking them individually will delete.
+To-dos are saved in local storage.
+
+Click once: mark as complete/undo
+Double-click: delete

@@ -199,6 +199,18 @@ textarea {
     cursor: pointer;
 }
 
+.note-item-completed {
+    font-size: 20px;
+    list-style-type: none;
+    margin-bottom: 10px;
+    text-transform: none;
+    cursor: pointer;
+    color: #484d6d5b;
+    text-decoration: line-through 3px;
+    font-style:italic;
+
+}
+
 .note-item:hover {
     text-decoration: line-through 3px;
     font-style:italic;
