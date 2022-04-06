@@ -4,8 +4,11 @@ const Search = () => {
         let query = event.target.value
         if (event.key === 'Enter') {
             /\.com|\.net|\.org|\.io|\.us|\.uk|\.ca|\.gg|\.to|\.gov/.test(query) ?
-            window.location
-                  .href=`https://${query}` :
+                window.location
+                    .href=`https://${query}` :
+            /\/r\//.test(query) ?
+                window.location
+                      .href=`https://www.reddit.com${query}` :
             window.location
                   .href=`https://duckduckgo.com/?q=${query}`
         }}
