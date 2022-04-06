@@ -8,8 +8,7 @@
 ### about
 
 This is a new-tab start page for web browsers. It began as a need
-for faster, more robust search function, but will become a sort of 
-playground for implementation of new features and modules.
+for quicker access to a search bar with [bangs](https://duckduckgo.com/bang), as well as customizable bookmarks— but will become a sort of playground for implementation of new features and modules. It is currently tailored to my own specific needs, but my current project is to make customization accessible for the front end user.
 
 ## current roadmap
 
