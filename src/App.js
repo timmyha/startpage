@@ -7,7 +7,7 @@ import Bookmark from './components/Bookmark'
 import NotesToggle from './components/NotesToggle'
 import Notes from './components/Notes'
 import { useEffect, useState } from 'react'
-import toast, { Toaster } from 'react-hot-toast';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
 
