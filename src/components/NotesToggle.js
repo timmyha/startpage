@@ -36,7 +36,7 @@ const NotesToggle = (props) => {
             style={notesStyle}
             onClick={toggleNotes}
             className="notes-button">
-                Notes
+                to-do
         </span>
         </div>
     )

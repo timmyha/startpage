@@ -42,13 +42,20 @@ const Notes = ({notes, setNotes, id}) => {
         setNotesField(event.target.value)
     }
 
+    const placeholders = ["feed your dog", "call the cops", "call your mom", "get outta this town", "get on my bike and go",
+                          "run away from home", "jump around", "go back to school", "finally watch the sopranos",
+                          "go to church", "learn to roller skate", "change my passwords", "apologize for everything"]
+    const randomInt = Math.floor(Math.random() * placeholders.length)
+
+    const placeholderText = `new task e.g. "${placeholders[randomInt]}"`
+
     return (
         <div>
             <ul>{notesContent}</ul>
         <TextareaAutosize
             autoFocus
             className="input-note"
-            placeholder='...new note'
+            placeholder={placeholderText}
             onKeyDown={handleSubmit}
             value={notesField}
             onChange={handleNotesFieldChange}

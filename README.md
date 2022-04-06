@@ -1,3 +1,44 @@
-#present day, present time!
+## present day, present time!
+##### *a minimalist startpage*
 
-instructions;
+![preview](./public/images/preview.png)
+
+#### [live demo](https://presentday-presenttime.herokuapp.com/)
+
+### about
+
+This is a new-tab start page for web browsers. It began as a need
+for faster, more robust search function, but will become a sort of 
+playground for implementation of new features and modules.
+
+## current roadmap
+
+- [ ] Add light/dark mode
+- [x] Add to-do module
+- [ ] Further to-do functionality
+- [ ] Add weather data in a way that fits the theme
+- [ ] Add ability to control which categories are rendered via `bookmarks.js`
+- [ ] Ability to control theme from front-end
+- [ ] Ability to edit bookmarks from front-end
+
+## settings
+
+#### bookmarks
+
+Bookmarks are currently controlled via `/bookmarks.js`. They are sorted
+into four categories, `social`, `dev`, `entertainment`, and `tools`. The
+component title, url, and corresponding color are currently editable.
+
+#### search
+
+Current search is handled with DuckDuckGo. To search Google, use the [bang](https://duckduckgo.com/bang)
+functionality, i.e. '!g your_search_query'.
+
+Ending a search query with a top-level domain name will go directly to that
+address.
+
+to go directly to a subreddit, type '/r/your_search_query'
+
+#### to-do list
+
+To-dos are saved in local storage. Clicking them individually will delete.
