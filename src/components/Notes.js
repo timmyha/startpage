@@ -9,7 +9,9 @@ const Notes = ({notes, setNotes, id}) => {
     const [notesField, setNotesField] = useState('')
 
     const handleSubmit = (event) => {
-        if (event.key === 'Enter') {
+        if (notesField.length > 0 &&
+            notesField.match(/[a-zA-Z0-9!@#$%^&*()]/) &&
+            event.key === 'Enter') {
             event.preventDefault()
             setNotes([
                 ...notes, 
@@ -30,7 +32,7 @@ const Notes = ({notes, setNotes, id}) => {
     };
 
     const notesContent = notes.map(note => {
-       return   <NoteItem 
+       return   note.content.length > 0 && <NoteItem 
                     key={nanoid()}
                     handleDeleteNote={()=> handleDeleteNote(note.id)}
                     content={note.content}
@@ -42,9 +44,12 @@ const Notes = ({notes, setNotes, id}) => {
         setNotesField(event.target.value)
     }
 
-    const placeholders = ["feed your dog", "call the cops", "call your mom", "get outta this town", "get on my bike and go",
-                          "run away from home", "jump around", "go back to school", "finally watch the sopranos",
-                          "go to church", "learn to roller skate", "change my passwords", "apologize for everything"]
+    const placeholders = 
+    ["feed your dog", "call the cops", "call your mom", "get outta this town", 
+    "get on my bike and go", "run away from home", "jump around", "go back to school", 
+    "finally watch the sopranos", "go to church", "learn to roller skate", 
+    "change my passwords", "apologize for everything", "seize the means of production",
+    "absolish all private property", "up the toffees", "let the ruling class tremble"]
     const randomInt = Math.floor(Math.random() * placeholders.length)
 
     const placeholderText = `new task e.g. "${placeholders[randomInt]}"`

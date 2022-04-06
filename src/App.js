@@ -11,12 +11,15 @@ import { Toaster } from 'react-hot-toast';
 
 function App() {
 
+    const [darkMode, setDarkMode] = useState(false)
+
     useEffect(() => {
         const data = localStorage.getItem('my-notes')
             data && setNotes(JSON.parse(data))
     }, [])
 
     const [notes, setNotes] = useState(JSON.parse(localStorage.getItem("my-notes")) || [])
+
     const [notesApp, toggleNotesApp] = useState(true)
 
     useEffect(()=> {
@@ -68,7 +71,8 @@ function App() {
      ))
         
   return (
-    <div className="main-page">
+    <div className={darkMode ? "body-dark" : "body"}>
+    <div className={darkMode ? "main-page-dark" : "main-page"}>
         <Toaster 
         toastOptions={{
             className: '',
@@ -99,6 +103,7 @@ function App() {
         <Notes
             notes={notes}
             setNotes={setNotes} /> }
+    </div>
     </div>
   );
 }

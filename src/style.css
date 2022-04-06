@@ -13,7 +13,7 @@
   background-color: transparent;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 650px) {
     .bookmarks-main {
       flex-direction:column !important;
     }
@@ -56,7 +56,8 @@ body {
     border: none;
     font-size: 2rem;
     font-family: 'Raleway';
-    color: #484d6da2;
+    color: inherit;
+    opacity: .8;
     text-align: center;
     width: inherit;
 }
@@ -161,10 +162,12 @@ body {
     background-color: #484d6d1c;
     border: none;
     font-family: 'Raleway';
-    font-size: 20px;
+    font-size: 17px;
+    padding: 5px;
     text-align: center;
     color: #484D6D;
     border-bottom: 3px solid #484D6D;
+    margin-top: 20px;
 
     width: 400px;
     height: 30px;
@@ -197,6 +200,9 @@ textarea {
     margin-bottom: 10px;
     text-transform: none;
     cursor: pointer;
+    max-width: 400px;
+    background-color: #484d6d18;
+    padding: 5px;
 }
 
 .note-item-completed {
@@ -208,11 +214,15 @@ textarea {
     color: #484d6d5b;
     text-decoration: line-through 3px;
     font-style:italic;
+    background-color: #484d6d18;
+    max-width: 400px;
+    padding: 5px;
 
 }
 
 .note-item:hover {
     text-decoration: line-through 3px;
+    background-color: #484d6d39;
     font-style:italic;
 
 }
