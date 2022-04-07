@@ -237,4 +237,16 @@ textarea {
 .notes-help {
     display: flex;
     justify-content: right;
+    width: 20px;
+}
+
+.notes-help-tooltip {
+    text-transform: none;
+    font-size: 10px;
+}
+
+.tooltip-text {
+    font-size: 10px;
+    font-style: normal;
+    font-family: helvetica;
 }
