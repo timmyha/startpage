@@ -42,4 +42,5 @@ to go directly to a subreddit, type '/r/your_search_query'
 To-dos are saved in local storage.
 
 Click once: mark as complete/undo
+
 Double-click: delete

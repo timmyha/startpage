@@ -19,7 +19,8 @@ let Bookmark = (props) => {
         "height": "40px",
         "alignItems": "center",
         "marginBottom": "5px",
-        "cursor": "pointer"
+        "cursor": "pointer",
+        "transition": "all 0.3s ease 0s",
   };
 
     let clickLink = () => {
@@ -42,6 +43,7 @@ let Bookmark = (props) => {
             onMouseOver={onHover} 
             onMouseOut={offHover}
              style={styles}
+             className="bookmark-button"
         >
             <div className="bookmark-title">
                 {props.title}

@@ -137,6 +137,7 @@ body {
     border: 1px solid #484D6D;
     border-radius: 5px 0px 0px 5px;
     cursor: pointer;
+    transition: all 0.3s ease 0s;
 }
 
 .notes-button {
@@ -145,6 +146,7 @@ body {
     border: 1px solid #484D6D;
     border-radius: 0px 5px 5px 0px;
     cursor: pointer;
+    transition: all 0.3s ease 0s;
 }
 
 .plus-icon {
@@ -225,4 +227,14 @@ textarea {
     background-color: #484d6d39;
     font-style:italic;
 
+}
+
+.bookmark-button:hover {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+
+.notes-help {
+    display: flex;
+    justify-content: right;
 }

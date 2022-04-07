@@ -3,6 +3,7 @@ import TextareaAutosize from "react-autosize-textarea"
 import { nanoid } from 'nanoid'
 import toast, { Toaster } from 'react-hot-toast';
 import NoteItem from './NoteItem.js'
+import NotesHelpIcon from './icons/NotesHelpIcon.js'
 
 const Notes = ({notes, setNotes, id}) => {
 
@@ -64,7 +65,7 @@ const Notes = ({notes, setNotes, id}) => {
             onKeyDown={handleSubmit}
             value={notesField}
             onChange={handleNotesFieldChange}
-        />
+        /> <NotesHelpIcon />
         </div>
     )
 }
