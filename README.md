@@ -43,4 +43,4 @@ To-dos are saved in local storage.
 
 Click once: mark as complete/undo
 
-Double-click: delete
+enter '!delete': clear all

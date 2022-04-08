@@ -1,21 +1,21 @@
-import {useState} from 'react'
+import DeleteNote from './icons/DeleteNote'
 
-const NoteItem = ({handleDeleteNote, content }) => {
+const NoteItem = ({handleDeleteNote, content, handleMarkComplete, isComplete }) => {
 
-    const [completed, setCompleted] = useState(false)
-
-    const handleMarkComplete = () => {
-        setCompleted(!completed)
-    }
 
     return (
+        <div className="note-item-container">
         <li
-                    className={completed ? "note-item-completed" : "note-item"}
+                    className={isComplete ? "note-item-completed" : "note-item"}
                     onClick={handleMarkComplete}
                     onDoubleClick={handleDeleteNote}
                 >
-                    {content}
+                    {content} 
                 </li>
+                <button 
+                onClick={handleDeleteNote}
+                className="delete-note-button"> <DeleteNote /> </button>
+                </div>
     )
 }
 

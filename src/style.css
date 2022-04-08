@@ -114,19 +114,6 @@ body {
     font-family: 'Jura';
 }
 
-.weather-display {
-    display: flex;
-    margin-top: -20px;
-    margin-bottom: 20px;
-    text-transform: lowercase;
-    justify-content: right !important;
-    font-family: Helvetica, sans-serif;
-
-    color: white;
-    background-color: #484D6D;
-    text-transform: uppercase;
-}
-
 .toggle-buttons {
     margin-bottom: 30px;
 }
@@ -147,17 +134,6 @@ body {
     border-radius: 0px 5px 5px 0px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
-}
-
-.plus-icon {
-    color: #484d6da9;
-    cursor: pointer;
-}
-
-
-.plus-icon:hover {
-    color: #484d6d;
-    cursor: pointer;
 }
 
 .input-note {
@@ -196,18 +172,25 @@ textarea {
     resize: none;
 }
 
+.note-item-container {
+    display: flex;
+}
+
 .note-item {
+    display: flex;
     font-size: 20px;
     list-style-type: none;
     margin-bottom: 10px;
     text-transform: none;
     cursor: pointer;
+    min-width: 400px;
     max-width: 400px;
     background-color: #484d6d18;
     padding: 5px;
 }
 
 .note-item-completed {
+    display: flex;
     font-size: 20px;
     list-style-type: none;
     margin-bottom: 10px;
@@ -217,16 +200,50 @@ textarea {
     text-decoration: line-through 3px;
     font-style:italic;
     background-color: #484d6d18;
+    min-width: 400px;
     max-width: 400px;
     padding: 5px;
 
+}
+
+.delete-note-button {
+    flex-direction: flex;
+    margin-left: -30px;
+    display: none;
+    background-color: pink;
+    border: none;
+    width: 30px;
+    height: 34px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.delete-note-button:hover {
+    display: flex;
+    flex-direction: row;
+    background-color: #EC5058;
+    color: #EFE9F4;
+    margin-left: -30px;
 }
 
 .note-item:hover {
     text-decoration: line-through 3px;
     background-color: #484d6d39;
     font-style:italic;
+}
 
+.note-item:hover + .delete-note-button {
+    display: flex;
+    background-color: transparent;
+    width: 30px;
+    margin-left: -30px;
+}
+
+.note-item-completed:hover + .delete-note-button {
+    display: flex;
+    background-color: transparent;
+    width: 30px;
+    margin-left: -30px;
 }
 
 .bookmark-button:hover {

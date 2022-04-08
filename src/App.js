@@ -102,7 +102,8 @@ function App() {
         /> : 
         <Notes
             notes={notes}
-            setNotes={setNotes} /> }
+            setNotes={setNotes} />
+             } 
     </div>
     </div>
   );

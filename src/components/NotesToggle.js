@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import placeholders from './resources/placeholders.js'
 
 const NotesToggle = (props) => {
 
