@@ -11,14 +11,19 @@ const Clock = () => {
                 hour: '2-digit', 
                 minute: '2-digit' 
             }));
-        }, 1000);
+        }, 5000);
     }, [])
 
+    const date = new Date();
+            let timeDisplay = date.toLocaleTimeString([], { 
+                hour: '2-digit', 
+                minute: '2-digit' 
+            });
     
 
 return (
          <div className="clock">
-            <h1 className="clock-text">{time}</h1>
+            <h1 className="clock-text">{time ? time : timeDisplay}</h1>
              </div> 
 )
 }
