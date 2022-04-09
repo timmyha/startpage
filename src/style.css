@@ -13,7 +13,7 @@
   background-color: transparent;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 640px) {
     .bookmarks-main {
       flex-direction:column !important;
     }
@@ -30,6 +30,16 @@
     }
     .weather-display {
         visibility: hidden;
+    }
+    .delete-note-button {
+        display: flex !important;
+        background-color: transparent !important;
+    }
+    .delete-note-button:hover {
+        background-color: #EC5058 !important;
+    }
+    .main-page {
+        margin: 0 !important;
     }
    }
 
@@ -207,7 +217,6 @@ textarea {
 }
 
 .delete-note-button {
-    flex-direction: flex;
     margin-left: -30px;
     display: none;
     background-color: pink;
