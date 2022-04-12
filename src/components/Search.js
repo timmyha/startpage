@@ -12,6 +12,12 @@ const Search = () => {
             : /\/r\//.test(query)
             ? window.location
                     .href=`https://www.reddit.com${query}`
+            : /scores/.test(query)
+            ? window.location
+                    .href=`https://www.flashscore.com/`
+            : /insta/.test(query)
+            ? window.location
+                    .href=`https://www.instagram.com`
             : window.location
                     .href=`https://duckduckgo.com/?q=${query}`
         }}
