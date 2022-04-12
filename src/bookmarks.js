@@ -31,7 +31,7 @@ export default [
 {
     "title": "mdn",
     "category": "dev",
-    "link": "http://www.instagram.com",
+    "link": "https://developer.mozilla.org/en-US/",
     "color": "#46BA84"
 },
 {
